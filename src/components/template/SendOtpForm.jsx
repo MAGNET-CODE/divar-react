@@ -12,7 +12,7 @@ function SendOtpForm({ setStep, mobile, setMobile }) {
         if(response) setStep(2);
         if(error) console.log(error.response.data.message);
         console.log({response, error})
-    }
+    } 
   return (
     <form onSubmit={submitHandler}>
         <p>ورود به حساب کاربری</p>
@@ -27,7 +27,7 @@ function SendOtpForm({ setStep, mobile, setMobile }) {
          value={mobile} 
          onChange={(e) => setMobile(e.target.value)}
         />
-        <button type="submit">تایید</button>
+        <button type="submit">ارسال کد</button>
     </form>
   )
 }
