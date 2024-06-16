@@ -1,5 +1,6 @@
-import React from 'react'
 import { sendOtp } from 'services/auth';
+
+import styles from "./SendOtpForm.module.css";
 
 function SendOtpForm({ setStep, mobile, setMobile }) {
     const submitHandler = async (event) => {
@@ -14,7 +15,7 @@ function SendOtpForm({ setStep, mobile, setMobile }) {
         console.log({response, error})
     } 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler}  className={styles.form}>
         <p>ورود به حساب کاربری</p>
         <span>قبل از ثبت آگهی، لطفاً وارد حساب خود شوید.
             کد تأیید به این شماره پیامک می‌شود.
