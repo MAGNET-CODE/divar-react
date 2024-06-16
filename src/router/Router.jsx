@@ -7,6 +7,7 @@ import HomePage from "pages/HomePage";
 import AdminPage from "pages/AdminPage";
 import DashboardPage from "pages/DashboardPage";
 import PageNotFound from "pages/404";
+import Loader from "components/modules/Loader";
 
 function Router() {
     const { data, isLoading, error } = useQuery({
@@ -15,7 +16,7 @@ function Router() {
       });
     console.log({data, isLoading,  error})
 
-    if(isLoading) return <h1>loading...</h1>
+    if(isLoading) return <Loader />
   return (
     <Routes>
         <Route
