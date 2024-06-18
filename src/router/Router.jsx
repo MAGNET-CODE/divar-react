@@ -13,8 +13,7 @@ function Router() {
     const { data, isLoading, error } = useQuery({
         queryKey: ["profile"],
         queryFn: getProfile
-      });
-    console.log({data, isLoading,  error})
+    });
 
     if(isLoading) return <Loader />
   return (
