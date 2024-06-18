@@ -10,8 +10,8 @@ function CategoryList() {
     const { isLoading, data } = useQuery({
         queryKey: ["get-categories"],
         queryFn: getCategory
-      });
-    console.log({data, isLoading})
+    });
+    
   return (
     <div className={styles.list}>
         {isLoading ? <Loader /> : (
